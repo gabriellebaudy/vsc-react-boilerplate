@@ -3,8 +3,6 @@ version: "1.0"
 services:
   vscode:
     image: qmcgaw/reactdevcontainer
-    volumes:
-      - ~/.ssh:/root/.ssh
     environment:
       - TZ=
     cap_add:
