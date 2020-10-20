@@ -1,0 +1,70 @@
+{
+  "name": "vsc-react-boilerplate",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "vscode",
+  "runServices": ["vscode"],
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "yarn install",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root",
+  "forwardPorts": [3000],
+  // "overrideCommand": "",
+  "extensions": [
+    // General frontend
+    "bierner.color-info",
+    "cssho.vscode-svgviewer",
+    // React
+    "jpoissonnier.vscode-styled-components",
+    // General javascript/typescript
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "visualstudioexptteam.vscodeintellicode",
+    // Console
+    "IBM.output-colorizer",
+    // Git
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "ms-azuretools.vscode-docker",
+    "vtrois.gitmoji-vscode",
+    // Other
+    "quicktype.quicktype" // Paste JSON as code
+  ],
+  "settings": {
+    // General settings
+    "files.eol": "\n",
+    "editor.tabSize": 2,
+    // Docker
+    "remote.extensionKind": {
+      "ms-azuretools.vscode-docker": "workspace"
+    },
+    // Javascript
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": false
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": false
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": false
+    },
+    "prettier-eslint.eslintIntegration": true,
+    "remote.containers.workspaceMountConsistency": "delegated"
+  }
+}
