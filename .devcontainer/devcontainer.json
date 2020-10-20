@@ -5,7 +5,7 @@
   "runServices": ["vscode"],
   "shutdownAction": "stopCompose",
   "postCreateCommand": "yarn install",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/vsc-react-boilerplate",
   "remoteUser": "root",
   "forwardPorts": [3000],
   // "overrideCommand": "",
